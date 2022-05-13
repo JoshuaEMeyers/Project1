@@ -134,5 +134,4 @@ class Controller(QMainWindow, Ui_MainWindow):
             self.radioButton_r.setChecked(False)
 
     def __str__(self) -> str:
-        print(f'{self.info_label.text()}')
         return f'{self.info_label.text()}'

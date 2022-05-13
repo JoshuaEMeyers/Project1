@@ -20,7 +20,7 @@ class Controller(QMainWindow, Ui_MainWindow):
         self.radioButton_r.clicked.connect(lambda: self.button_update(1))
         self.radioButton_s.clicked.connect(lambda: self.button_update(2))
         self.enemy_label_2.setText(self.opponents())
-        self.enemy_label.setText(self.textEdit_entry2.toPlainText())
+        self.enemy_label.setText(self.enemy_label_2.text())
         self.button_name.clicked.connect(lambda: self.name())
         self.button_submit.clicked.connect(lambda: self.battle())
         self.enemy_move: str = ''
@@ -33,7 +33,7 @@ class Controller(QMainWindow, Ui_MainWindow):
         Method used to pick a name for your opponent
         :return: str
         """
-        enemy = ['Dave', 'Bob', 'Emma', 'Victoria']
+        enemy = ['Dave', 'Bob', 'Emma', 'Victoria', 'Oliver', 'James', 'Lucas', 'Jessica', 'Heather', 'Sophia']
         random_enemy = random.choice(enemy)
         return random_enemy
 
